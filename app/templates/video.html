@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Welcome to you use course!</h1>
+    {% for v in vedio %}
+        <div>
+            <h5><a href={{ v }}>{{ v }}</a></h5>
+        </div>
+    {% endfor %}
+{% endblock %}
