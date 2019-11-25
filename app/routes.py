@@ -2,6 +2,7 @@ from flask import render_template, flash, redirect, url_for
 
 from app import app
 from app.form import LoginForm
+import os
 
 @app.route('/')
 @app.route('/index')
@@ -31,7 +32,7 @@ def login():
 
 @app.route('/video')
 def video():
-    with open("E:/work/python/usually/webapp/static/vedio", 'r', encoding='utf-8') as f:
+    with open(os.path.dirname(os.getcwd()) + "\\static\\vedio", 'r', encoding='utf-8') as f:
         data = []
         for i in f:
             if i[0] != 'h':
